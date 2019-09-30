@@ -6,7 +6,7 @@
 # Created by: John Fay (john.fay@duke.edu)
 # Created on: Fall 2019
 #--------------------------------------------------------------
-# Copy and paste a line of data as the lineString variable value
+
 # Create a variable pointing to the file with no header
 fileName = "data/raw/SaraNoHeader.txt"
 # Open the file as a read-only file object
@@ -20,10 +20,10 @@ fileObj.close()
 
 # Extract the first line from the lineList
 for lineString in lineList:
-    
+
     # Use the split command to parse the items in lineString into a list object
     lineData = lineString.split("\t")
-    
+
     # Assign variables to specfic items in the list
     recordID = lineData[0]              # ARGOS tracking record ID
     obsDateTime = lineData[2]           # Observation date and time (combined)
@@ -35,4 +35,5 @@ for lineString in lineList:
     
     # Print information to the user
     print ("Record {0} indicates Sara was seen at {1}N and {2}W on {3}".
-           format(recordID,obsLat,obsLat,obsDate))
+           format(recordID, obsLat,obsLat,obsDate))
+    
