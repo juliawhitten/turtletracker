@@ -46,3 +46,6 @@ for lineString in lineStrings:
     
 # Indicate script is complete
 print ("Finished")
+
+#Ask user for date (always a string)
+userDate = '7/3/2003' #input("Enter a date (M/D/YYYY):")
