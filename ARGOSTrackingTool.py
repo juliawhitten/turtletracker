@@ -3,7 +3,7 @@
 #
 # Description: Parses a line of ARGOS tracking data 
 #
-# Created by: John Fay (john.fay@duke.edu)
+# Created by: Julia Whitten (julia.whitten@duke.edu)
 # Created on: Fall 2019
 #--------------------------------------------------------------
 # Create a variable pointing to the file with no header
@@ -39,7 +39,7 @@ for lineString in lineStrings:
     obsLon = lineData[6]                # Observation Longitude
 
     # Add values to dictionary
-    dateDict[recordID] = obsDate
+    dateDict[recordID] = obsDateTime
     locationDict[recordID] = (obsLat,obsLon)
     
 # Indicate script is complete
