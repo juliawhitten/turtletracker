@@ -41,7 +41,7 @@ for lineString in lineStrings:
     #Filter which records are added to the dictionaries
     if obsLC in ("1","2","3"):
         # Add values to dictionary
-        dateDict[recordID] = obsDateTime
+        dateDict[recordID] = obsDate
         locationDict[recordID] = (obsLat,obsLon)
     
 # Indicate script is complete
@@ -49,3 +49,9 @@ print ("Finished")
 
 #Ask user for date (always a string)
 userDate = '7/3/2003' #input("Enter a date (M/D/YYYY):")
+
+#Collect keys matching user date
+keyList= []
+for k,v in dateDict.items():
+    if v== userDate:
+        keyList.append(k)
