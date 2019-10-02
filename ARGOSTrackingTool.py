@@ -19,6 +19,9 @@ print ("There are {} records in the file".format(len(lineStrings)))
 # Close the file object
 fileObj.close()
 # Create empty dictionaries
+dateDict = {}
+locationDict = {}
+
 
 # Use a for loop to read each line, one at a time, until the list is exhausted
 for lineString in lineStrings:
@@ -36,6 +39,8 @@ for lineString in lineStrings:
     obsLon = lineData[6]                # Observation Longitude
 
     # Add values to dictionary
+    dateDict[recordID] = obsDate
+    locationDict[recordID] = (obsLat,obsLon)
     
 # Indicate script is complete
 print ("Finished")
